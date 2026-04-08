@@ -4,8 +4,8 @@
 
 publiccodeYmlVersion: "0.5"
 
-name: Developer Overheid NL Agent Skills
-url: "https://github.com/developer-overheid-nl/developer-overheid-nl-agent-skills"
+name: Developer.overheid.nl Agent Skills
+url: "https://github.com/developer-overheid-nl/skills-developer-overheid-nl"
 
 # Todo: make a page about these skills on the knowledge base (https://developer.overheid.nl/kennisbank/ai/toosl/nl-agentic-skills)
 landingURL: "https://developer.overheid.nl"
@@ -25,12 +25,12 @@ developmentStatus: beta
 
 description:
   nl:
-    longDescription: >
+    longDescription: |
       Agent Skills voor de kennisbank van developer.overheid.nl. Deze skills
       bieden begeleiding op het gebied van API-ontwerp, open source,
       beveiliging, infrastructuur, data, front-end en programmeertalen voor
       overheidsprojecten.
-    shortDescription:
+    shortDescription: >-
       Agent Skills voor de kennisbank van developer.overheid.nl voor
       Nederlandse overheidsprojecten.
     features:
@@ -42,12 +42,12 @@ description:
       - Front-end standaarden en NL Design System
       - Programmeertaal richtlijnen
   en:
-    longDescription: >
+    longDescription: |
       Agent Skills for the Dutch Government Developer Portal
       (developer.overheid.nl) knowledge base. These skills provide guidance on
       API design, open source, security, infrastructure, data, front-end, and
       programming languages for Dutch government projects.
-    shortDescription:
+    shortDescription: >-
       Agent Skills for the developer.overheid.nl knowledge base for Dutch
       government projects.
     features:
@@ -71,9 +71,13 @@ intendedAudience:
 
 localisation:
   availableLanguages:
-    - NL
+    - nl
   localisationReady: false
 
-# This is a beta project with no official maintainers
 maintenance:
-  type: none
+  type: internal
+
+  contacts:
+    - name: developer.overheid.nl
+      email: developer.overheid@geonovum.nl
+      affiliation: Geonovum
