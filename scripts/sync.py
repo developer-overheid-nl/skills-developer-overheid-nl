@@ -33,49 +33,49 @@ TOPICS = {
     "apis": {
         "name": "don-apis",
         "title": "DON APIs",
-        "description": "Dutch Government API design rules, OpenAPI specifications, and API architecture guidelines. Use when building REST APIs for Dutch government projects, creating OpenAPI specs, or implementing API design patterns like webhooks and event-driven architecture.",
+        "description": "Dutch government API design rules and OpenAPI standards: REST APIs, webhooks, event-driven architecture for government projects.",
         "keywords": ["API", "REST", "OpenAPI", "OAS", "webhooks", "API design rules"],
     },
     "leidraad": {
         "name": "don-leidraad",
         "title": "DON Leidraad (NeRDS)",
-        "description": "NeRDS software development guidelines for Dutch government projects. Use when making architectural decisions, setting up CI/CD, implementing security practices, handling privacy requirements, or ensuring accessibility compliance in government software.",
+        "description": "NeRDS software development guidelines for Dutch government: architecture, CI/CD, security, privacy, accessibility.",
         "keywords": ["NeRDS", "leidraad", "guidelines", "agile", "cloud", "security", "privacy", "accessibility"],
     },
     "security": {
         "name": "don-security",
         "title": "DON Security",
-        "description": "Security standards and authentication tools for Dutch government software. Use when implementing DigiD, eHerkenning, OAuth, OIDC, PKIoverheid, or other Dutch government authentication and security standards.",
+        "description": "Dutch government auth and security standards: DigiD, eHerkenning, OAuth, OIDC, PKIoverheid, BIO, NIS2.",
         "keywords": ["DigiD", "eHerkenning", "OAuth", "OIDC", "PKIoverheid", "BIO", "NIS2", "security"],
     },
     "open-source": {
         "name": "don-open-source",
         "title": "DON Open Source",
-        "description": "Open source standards and practices for Dutch government projects. Use when setting up an open source repository, choosing licenses, creating publiccode.yml, or following the Standard for Public Code.",
+        "description": "Open source standards for Dutch government: licensing, publiccode.yml, Standard for Public Code, CONTRIBUTING.md.",
         "keywords": ["open source", "publiccode.yml", "licensing", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md"],
     },
     "infra": {
         "name": "don-infra",
         "title": "DON Infrastructure",
-        "description": "Infrastructure and deployment standards for Dutch government systems. Use when deploying to Haven (government Kubernetes), setting up FSC (Federated Service Connectivity), or checking infrastructure compliance.",
+        "description": "Dutch government infrastructure standards: Haven (Kubernetes), FSC (Federated Service Connectivity), deployment compliance.",
         "keywords": ["Haven", "Kubernetes", "FSC", "infrastructure", "deployment", "compliance"],
     },
     "data": {
         "name": "don-data",
         "title": "DON Data",
-        "description": "Data standards and practices for Dutch government applications. Use when working with government data formats, implementing data exchange standards, or ensuring data quality compliance.",
+        "description": "Dutch government data standards: data exchange, data quality, government data formats and compliance.",
         "keywords": ["data", "standards", "exchange", "quality"],
     },
     "front-end": {
         "name": "don-front-end",
         "title": "DON Front-end",
-        "description": "Front-end development standards for Dutch government websites. Use when building accessible government web applications, implementing NL Design System components, or ensuring WCAG compliance.",
+        "description": "Dutch government web standards: NL Design System, WCAG accessibility, government UI patterns.",
         "keywords": ["front-end", "NL Design System", "WCAG", "accessibility", "web development"],
     },
     "programmeertalen": {
         "name": "don-programmeertalen",
         "title": "DON Programmeertalen",
-        "description": "Programming language guidelines for Dutch government software. Use when choosing programming languages, setting up development environments, or following language-specific best practices for government projects.",
+        "description": "Programming language guidelines for Dutch government software: language choice, dev environments, best practices.",
         "keywords": ["programming languages", "best practices", "coding standards"],
     },
 }
@@ -226,7 +226,7 @@ def generate_skill(topic: str, meta: dict, docs: list[tuple[str, str]], output_d
     # Generate SKILL.md (main entry point) with improved spec compliance
     skill_content = f"""---
 name: {meta['name']}
-description: {meta['description']}
+description: {json.dumps(meta['description'], ensure_ascii=False)}
 metadata:
   source: developer.overheid.nl
   synced-from: https://github.com/{GITHUB_REPO}
