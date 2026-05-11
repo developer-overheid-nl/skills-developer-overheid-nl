@@ -226,7 +226,7 @@ def generate_skill(topic: str, meta: dict, docs: list[tuple[str, str]], output_d
     # Generate SKILL.md (main entry point) with improved spec compliance
     skill_content = f"""---
 name: {meta['name']}
-description: {meta['description']}
+description: {json.dumps(meta['description'], ensure_ascii=False)}
 metadata:
   source: developer.overheid.nl
   synced-from: https://github.com/{GITHUB_REPO}
