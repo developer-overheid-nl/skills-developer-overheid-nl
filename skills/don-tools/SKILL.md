@@ -1,6 +1,6 @@
 ---
 name: don-tools
-description: "Ontwerpen en bouwen van REST APIs voor de Nederlandse overheid (design-first): OAS genereren met oas-generator, valideren met don-checker, schemakeuze uit het schema-register, codegen. Gebruik dit voor de praktische bouw-workflow."
+description: "REST APIs bouwen voor de Nederlandse overheid, design-first: OAS genereren met oas-generator, valideren met don-checker, schemakeuze uit het schema-register, codegen."
 model: sonnet
 allowed-tools:
   - AskUserQuestion
